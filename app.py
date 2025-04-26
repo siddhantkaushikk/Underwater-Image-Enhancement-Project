@@ -30,15 +30,15 @@ def about():
         st.write("Please upload the block diagram image if available.")
         block_diagram = st.file_uploader("Upload Block Diagram", type=["jpg", "png"], key="block_diagram")
         if block_diagram:
-            st.image(Image.open(block_diagram), use_column_width=True)
+            st.image(Image.open(block_diagram), use_container_width=True)
     with st.expander("Results On Sample Images"):
         st.write("Please upload sample result images to display.")
         result1 = st.file_uploader("Upload Result Image 1", type=["jpg", "png"], key="result1")
         if result1:
-            st.image(Image.open(result1), use_column_width=True)
+            st.image(Image.open(result1), use_container_width=True)
         result2 = st.file_uploader("Upload Result Image 2", type=["jpg", "png"], key="result2")
         if result2:
-            st.image(Image.open(result2), use_column_width=True)
+            st.image(Image.open(result2), use_container_width=True)
     with st.expander("Team Members"):
         st.write("""Pranjali Bajpai - 2018EEB1243
                     \n\nYogesh Vaidhya - 2018EEB1277""")
@@ -54,7 +54,7 @@ def image_enhancer():
             st.text("Please upload RGB image")
         else:
             st.text("Uploaded Image")
-            st.image(image, use_column_width=True)
+            st.image(image, use_container_width=True)
             imtype = st.radio("Select one", ('Greenish Image', 'Bluish Image'))
             if imtype == "Greenish Image":
                 flag=0
@@ -63,9 +63,9 @@ def image_enhancer():
             if(st.button("Enhance Uploaded Image")):
                 pcafused, averagefused = underwater_image_enhancement(image, flag)
                 st.text("Enhanced Image Using PCA Based Fusion")
-                st.image(pcafused, use_column_width=True)
+                st.image(pcafused, use_container_width=True)
                 st.text("Enhanced Image Using Averaging Based Fusion")
-                st.image(averagefused, use_column_width=True)
+                st.image(averagefused, use_container_width=True)
 
 def compensate_RB(image, flag):
     imager, imageg, imageb = image.split()

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+\#!/usr/bin/env python
 # coding: utf-8
 
 # Import libraries
@@ -83,7 +83,7 @@ def compensate_RB(image, flag):
             imageB[i][j] = (imageB[i][j] - minB) / (maxB - minB)
     meanR = np.mean(imageR)
     meanG = np.mean(imageG)
-    meanB = nºp.mean(imageB)
+    meanB = np.mean(imageB)
     if flag == 0:
         for i in range(y):
             for j in range(x):

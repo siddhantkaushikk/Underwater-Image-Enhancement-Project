@@ -39,9 +39,8 @@ def about():
         result2 = st.file_uploader("Upload Result Image 2", type=["jpg", "png"], key="result2")
         if result2:
             st.image(Image.open(result2), use_container_width=True)
-    with st.expander("Team Members"):
-        st.write("""Pranjali Bajpai - 2018EEB1243
-                    \n\nYogesh Vaidhya - 2018EEB1277""")
+    with st.expander(" "):
+        
 
 def image_enhancer():
     st.header("Underwater Image Enhancement Web App")

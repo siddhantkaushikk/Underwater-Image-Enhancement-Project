@@ -40,7 +40,7 @@ def about():
         if result2:
             st.image(Image.open(result2), use_container_width=True)
     with st.expander(" "):
-        
+        pass
 
 def image_enhancer():
     st.header("Underwater Image Enhancement Web App")
